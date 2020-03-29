@@ -1,0 +1,102 @@
+/*	4   Provide SQL statements and answers (output) to the following queries on the database you re-design and implemented.
+        Comments are expected. Output should be formatted. Data/Information displayed should be in values, not in types,
+        e.g., Jhon Smith, not NAME('Jhon','Smith'). */
+
+/*  A.  Find eployees whose first name includes the string 'st' and live in Edinburgh, displaying their full names.   */
+        SELECT e.PrintFullName() || ' lives in ' || e.pFullAddress.city
+        AS "Employee First Name Contains 'st' and lives in Edinburgh"
+        FROM tabEmployees e
+        WHERE UPPER(e.pFullName.pName) LIKE '%ST%' AND e.pFullAddress.city = 'Edinburgh'
+        ORDER BY e.pFullName.pSurname;
+/
+
+/*  B.  Find the number of saving accounts at each branch, displaying the number and branch's address.  */
+        SELECT a.bID.bID AS "Branch ID",
+               a.bID.bAddress.PrintAddress() AS "Branch Address",
+               COUNT(a.accType) AS "Opened Savings Accounts"
+        FROM tabAccounts a
+        WHERE a.accType = 'Savings'
+        GROUP BY a.bID.bID, a.bID.bAddress.PrintAddress()
+        ORDER BY COUNT(a.accType) DESC;        
+/
+
+/*  C.  At each branch, find customers who have the highest balance in their saving account,
+        displaying the branch ID, their names, and the balance. */
+        WITH max_Balance AS
+        (
+        SELECT c.accNum.bID.bID AS "Branch ID",
+               c.accHolder.PrintFullName() AS "Customer Name",
+               TO_CHAR(c.accNum.balance, 'L9,999,999.99') AS "Balance",
+        RANK()OVER(
+                    PARTITION BY c.accNum.bID ORDER BY c.accNum.balance DESC) balanceRank
+                    FROM tabCustomersAccounts c
+                    WHERE c.accNum.accType = 'Savings'
+        )
+        SELECT m."Branch ID", m."Customer Name", m."Balance"
+        FROM max_Balance m
+        WHERE balanceRank = 1
+        ORDER BY m."Branch ID";
+/
+
+/*  D.  Find employees who are supervised by a manager and have accounts in the bank,
+        displaying the branch address, that the employee works in and the branch address that the account is open. */
+        SELECT e.PrintFullName() AS "Employee Name",
+               e.bID.bAddress.PrintAddress() AS "Employee Works at Branch",
+               a.accNum.bID.bAddress.PrintAddress() AS "Employees has an Account at Branch"
+        FROM tabEmployees e, tabCustomersAccounts a
+        WHERE a.accHolder = REF(e) AND e.supID.ePosition = 'Manager';
+/            
+
+/*  E.  At each branch, find customers who have the highest free overdraft limit in all current accounts
+        that are joint accounts,
+        displaying the branch’s ID, the customer’s full names, the free overdraft limit in his/her current account.    */
+        WITH max_Overdraft AS
+        (
+        SELECT c.accNum.bID.bID AS "Branch ID",
+               c.accNum.accNumber AS "Account Number",
+               c.accHolder.PrintFullName() AS "Account Holders Name",
+               TO_CHAR(c.accNum.limFreeOD, 'L9,999.99') AS "Overdraft Limit",
+        RANK()OVER(
+                    PARTITION BY c.accNum.bID.bID ORDER BY c.accNum.limFreeOD DESC) freeOD_Rank
+                    FROM tabCustomersAccounts c
+                    WHERE c.accNum.accType = 'Current' AND c.accNum.isJoined = 'Y'
+        )
+        SELECT m."Branch ID", m."Account Number", m."Account Holders Name", m."Overdraft Limit"
+        FROM max_Overdraft m
+        WHERE freeOD_Rank = 1
+        ORDER BY m."Branch ID";
+        
+
+/*  F.  Find customers who have more than one mobile, and at least one of the numbers starts with 0750,
+        displaying the customer’s full name and mobile numbers.
+        COLLECTIONS must be used.   */
+        SELECT c.cusID AS "Customer ID",
+        c.PrintFullName() AS "Customer Name",
+        c.PrintNumbers() AS "Customer Phones"
+        FROM tabCustomers c, TABLE(c.pPhones) t, (
+                                SELECT c.cusID, COUNT(t.phoneType)
+                                FROM tabCustomers c, TABLE(c.pPhones) t
+                                WHERE t.phoneType = 'Mobile'
+                                HAVING COUNT(t.phoneType) > 1
+                                GROUP BY c.cusID
+                             )  twoMobiles
+        WHERE c.cusID = twoMobiles.cusID AND t.areaCode LIKE '0750%';
+
+
+/*  G.  Find the number of employees who are supervised by Mrs Smith, who is supervised by Mr Jones.
+        REFERENCES must be used.    */
+        SELECT COUNT(e.empID) AS "Number of Employees Supervised by Mrs Smith, who is Supervised by Mr Jones"
+        FROM tabEmployees e
+        WHERE e.supID.pFullName.pSurname = 'Smith' AND e.supID.supID.pFullName.pSurname = 'Jones';
+
+/*  H.  Award employees at the end of a year:
+		gold medals for employees who have been working at the bank for more than 12 years and supervised more than 6 staff;
+		silver medals for employees who have been working at the bank for more than 8 years and supervised more than 3 staff;
+		bronze medals for employees who have been working at the bank for more than 4 years.
+		Displaying winners’ names and Medal awarded (only displaying those who have been awarded).
+		ETHODS must be used.    */
+        SELECT
+        e.PrintFullName() AS "Employee Name",
+        e.EmployeeAward() AS "Employee Award"
+        FROM tabEmployees e
+        WHERE e.EmployeeAward() != 'NULL';

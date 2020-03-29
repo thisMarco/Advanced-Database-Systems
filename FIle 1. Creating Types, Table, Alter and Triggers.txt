@@ -1,0 +1,328 @@
+/*  3.  Implement the database according to your design at Task 2 and populate the tables with test data,
+        20 rows at least for each table. The data you inserted should be sufficient to demonstrate your
+        object-relationsl design decisions and unambigously answer the queries below (Task 4).
+        All SQL statements for creating and populating the database should be included.
+*/
+
+/*  ***         CREATE TYPE NAME (typName)          ***     */
+CREATE TYPE typName AS OBJECT
+(
+    title VARCHAR2(5),      -- Mr, Ms, Mrs etc.
+    pName VARCHAR2(20),     -- Jhon, Marco, etc.
+    pSurname VARCHAR2(30)   -- McDonals, Smith, etc.
+)   FINAL;
+
+/
+/*  ***         CREATE TYPE ADDRESS (typAddress)          ***     */
+CREATE TYPE typAddress AS OBJECT
+(
+    bNumber VARCHAR2(5),    -- 25, 3A, 125, etc.
+    street VARCHAR2(30),    -- Colinton Road, Napier Street, etc.
+    city VARCHAR2(25),      -- Edinburgh, Glasgow, etc.
+    postCode VARCHAR2(8)    -- EH11 7HG, G34 F90, etc.
+)   FINAL;
+
+/
+/*  ***         CREATE TYPE PHONE (typPhone)          ***     */
+CREATE TYPE typPhone AS OBJECT
+(
+    phoneType VARCHAR2(10), -- Mobile or Landline.
+    areaCode VARCHAR2(5),   -- 0750, 0751, etc.
+    phoneNum VARCHAR2(10)   -- 743711, 752563, etc.
+)   FINAL;
+
+/
+/*  ***         CREATE TYPE TABLE typPhonesTable (typPhonesTable)          ***     */
+CREATE TYPE typPhonesTable AS TABLE OF typPhone;
+
+/
+/*  ***         CREATE TYPE BRANCH (typBranch)          ***     */
+CREATE TYPE typBranch AS OBJECT
+(
+    bID VARCHAR2(10),       -- EDI1, EDI2, GLA2, etc.
+    bAddress typAddress,    -- Colinton Road, Napier Street, etc.
+    bPhones typPhonesTable  -- 0750 743711, 0751 752563, etc.
+)   FINAL;
+
+/
+
+/*  ***         CREATE TYPE Person (typPerson)          ***     */
+CREATE TYPE typPerson AS OBJECT
+(
+    pFullName typName,      -- Andrew McDonald, Paul Smith, etc.
+    pFullAddress typAddress,-- 10, Colinton Rd, Edinburgh, EH11 8UH, etc.
+    pPhones typPhonesTable, -- 0750 743711, 0751 752563, etc.
+    NIN VARCHAR2(15)        -- GM 01 09 13 C, LZ 98 00 74 B, etc.
+)   NOT FINAL;
+
+/
+
+
+/*  ***         CREATE SUB-TYPE Customer (typCustomer)          ***     */
+CREATE TYPE typCustomer UNDER typPerson
+(
+    cusID VARCHAR2(10)      -- CUS1, CUS857, CUS98965, etc.    
+)   FINAL;
+
+/
+/*  ***         CREATE SUB-TYPE Employee (typEmployee)          ***     */
+CREATE TYPE typEmployee UNDER typPerson
+(
+    empID VARCHAR2(10),     -- EMP1, EMP12, EMP1252, etc.
+    ePosition VARCHAR2(20), -- Head, Manager, Project Leader, etc.
+    eSalary NUMBER(9,2),    -- 50000,00, 35000,00, etc.
+    bID REF typBranch,      -- REF.
+    supID REF typEmployee,  -- REF.
+    joinDate DATE           -- 29-Sep-2010, 18-Feb-86, etc.
+)   FINAL;
+
+/
+/*  ***         CREATE TYPE Account (typAccount)          ***     */
+CREATE TYPE typAccount AS OBJECT
+(
+    accNumber NUMBER(10),   -- 1, 2, 3, etc.
+    accType VARCHAR2(20),   -- Current or Savings.
+    isJoined CHAR(1),       -- Y or N.
+    balance NUMBER(10,2),   -- 560.35, 125200.78, etc.
+    bID REF typBranch,      -- REF.
+    intRate NUMBER(7,4),    -- 0.25, 0.10, etc.
+    limFreeOD NUMBER(7,2),  -- 250, 500, etc.
+    openDate DATE           -- 29-Sep-2010, 18-Feb-86, etc.
+)   FINAL;
+
+/
+/*  *****   CREATING TABLES     *****   */
+
+/*  ***         CREATE TABLE Customers (tabCustomers)          ***     */
+CREATE TABLE tabCustomers OF typCustomer
+(
+    CONSTRAINT regCusID CHECK(REGEXP_LIKE(cusID, '^(CUS)+[0-9]{1,}','c')),
+    CONSTRAINT pkCusID PRIMARY KEY(cusID),
+    CONSTRAINT nnCName CHECK(pFullName.pSurname IS NOT NULL),
+    CONSTRAINT nnCAddress CHECK(pFullAddress.street IS NOT NULL),
+    CONSTRAINT nnCCity CHECK(pFullAddress.city IS NOT NULL),
+    CONSTRAINT nnCPC CHECK(pFullAddress.postCode IS NOT NULL),
+    CONSTRAINT nnCNIN CHECK (NIN IS NOT NULL),
+    CONSTRAINT nnCPhone CHECK (pPhones IS NOT NULL)
+)   NESTED TABLE pPhones STORE AS cusPhonesTable;
+
+/
+/*  ***         CREATE TABLE Employees (tabEmployees)          ***     */
+CREATE TABLE tabEmployees OF typEmployee
+(
+    CONSTRAINT regEmpID CHECK(REGEXP_LIKE(empID, '^(EMP)+[0-9]{1,}','c')),
+    CONSTRAINT pkEmpID PRIMARY KEY(empID),
+    CONSTRAINT valPosition CHECK (ePosition IN ('Head', 'Manager', 'Project Leader',
+                                                'Accountant', 'Cashier')),
+    CONSTRAINT nnEName CHECK(pFullName.pSurname IS NOT NULL),
+    CONSTRAINT nnEAddress CHECK(pFullAddress.street IS NOT NULL),
+    CONSTRAINT nnECity CHECK(pFullAddress.city IS NOT NULL),
+    CONSTRAINT nnEPC CHECK(pFullAddress.postCode IS NOT NULL),
+    CONSTRAINt nnENIN CHECK (NIN IS NOT NULL),
+    CONSTRAINT nnESalary CHECK(eSalary > 0),
+    CONSTRAINT nnEBID CHECK(bID IS NOT NULL),
+    CONSTRAINT nnEJoinDate CHECK(joinDate IS NOT NULL),
+    CONSTRAINT nnEPhone CHECK (pPhones IS NOT NULL)
+)   NESTED TABLE pPhones STORE AS empPhonesTable;
+
+/
+/*  ***         CREATE TABLE Branches (tabBranches)          ***     */
+CREATE TABLE tabBranches OF typBranch
+(
+    CONSTRAINT regBID CHECK(REGEXP_LIKE(bID, '^[A-Z]{3,3}+[0-9]{1,}','c')),
+    CONSTRAINT pkBID PRIMARY KEY(bID),
+    CONSTRAINT nnBAddress CHECK(bAddress.street IS NOT NULL),
+    CONSTRAINT nnBCity CHECK(bAddress.city IS NOT NULL),
+    CONSTRAINT nnBPC CHECK (bAddress.postCode IS NOT NULL),
+    CONSTRAINT nnBPhone CHECK(bPhones IS NOT NULL)
+)   NESTED TABLE bPhones STORE AS braPhonesTable;
+
+/
+/*  ***         CREATE TABLE Accounts (tabAccounts)          ***     */
+CREATE TABLE tabAccounts OF typAccount
+(
+    CONSTRAINT pkAccNum PRIMARY KEY(accNumber),
+    CONSTRAINT valAccType CHECK(accType IN ('Savings', 'Current')),
+    CONSTRAINT nnBalance CHECK(balance IS NOT NULL),
+    CONSTRAINT nnBID CHECK(bID IS NOT NULL),
+    CONSTRAINT nnIntRate CHECK(intRate IS NOT NULL),
+    CONSTRAINT nnLimFreeOD CHECK(limFreeOD IS NOT NULL),
+    CONSTRAINT nnOpenDate CHECK(openDate IS NOT NULL)
+);
+
+/*  ***         CREATE TABLE CustomersAccounts (tabCustomersAccounts)          ***     */
+CREATE TABLE tabCustomersAccounts
+(
+    accHolder REF typPerson CONSTRAINT nnAccHolder CHECK(accHolder IS NOT NULL),
+    accNum  REF typAccount CONSTRAINT nnAccNum CHECK(accNum IS NOT NULL)
+);
+
+/*  *****   ALTERING TYPES     *****   */
+/*  ***         ALTER TYPE Person (typPerson)          ***     */
+ALTER TYPE typPerson
+    ADD MEMBER FUNCTION PrintFullName RETURN STRING,
+    ADD MEMBER FUNCTION PrintNumbers RETURN STRING
+    CASCADE;
+/
+CREATE OR REPLACE TYPE BODY typPerson AS
+    MEMBER FUNCTION PrintFullName RETURN STRING IS
+        BEGIN
+            RETURN (pFullName.title || '. ' || pFullName.pname || ' ' || pFullName.psurname);
+        END PrintFullName;
+        
+    MEMBER FUNCTION PrintNumbers RETURN STRING IS
+        phoneNumber VARCHAR2(1000) := 'Customer Phone Numbers: ';
+        BEGIN
+            FOR i IN self.pPhones.FIRST .. self.pPhones.LAST
+            LOOP
+                phoneNumber := (phoneNumber || ' ' || 
+                                self.pPhones(i).phoneType || ':' ||
+                                self.pPhones(i).areaCode || ' ' ||
+                                self.pPhones(i).phoneNum || '.');
+            END LOOP;
+            RETURN (phoneNumber);
+        END PrintNumbers;
+END;
+/
+
+/*  ***         ALTER TYPE Employee (typEmployee)          ***     */
+ALTER TYPE typEmployee
+    ADD MEMBER FUNCTION EmployeeAward RETURN STRING,
+    ADD MEMBER FUNCTION EmployeeSupervises RETURN STRING
+    CASCADE;
+/
+CREATE OR REPLACE TYPE BODY typEmployee AS
+    MEMBER FUNCTION EmployeeAward RETURN STRING IS
+        employmentYears NUMBER; -- Employee Years working for the Company
+        empSupervised NUMBER;   -- Employee Supervised Staff
+        award VARCHAR2(20);
+        BEGIN
+            employmentYears := TRUNC(((SYSDATE - joinDate)/365),1);
+            IF employmentYears > 4
+                THEN
+                    SELECT COUNT(supID) INTO empSupervised
+                    FROM tabEmployees e
+                    WHERE self.empID = DEREF(e.supID).empID;
+                            
+                    IF empSupervised > 6 AND employmentYears > 12
+                        THEN
+                            RETURN 'Gold Medal';
+                        ELSIF empSupervised > 3 AND employmentYears > 8
+                            THEN
+                                RETURN 'Silver Medal';
+                            ELSE
+                                RETURN 'Bronze Medal';
+                    END IF;
+                ELSE
+                    RETURN NULL;
+            END IF;
+        END EmployeeAward;
+        
+        MEMBER FUNCTION EmployeeSupervises RETURN STRING IS
+        underEmp NUMBER;
+        BEGIN
+            SELECT COUNT(*) INTO underEmp
+            FROM tabEmployees e
+            WHERE self.empID = DEREF(e.supID).empID;
+            
+            RETURN TO_CHAR(underEmp);
+        END EmployeeSupervises;
+END;
+/
+
+/*  ***         ALTER TYPE Address (typAddress)          ***     */
+ALTER TYPE typAddress
+    ADD MEMBER FUNCTION PrintAddress RETURN STRING
+    CASCADE;
+/
+CREATE OR REPLACE TYPE BODY typAddress AS
+    MEMBER FUNCTION PrintAddress RETURN STRING IS
+        BEGIN
+            RETURN (bNumber || ', ' || street || ', ' || city  || ', ' || postCode);
+        END PrintAddress;
+END;
+/
+
+
+/*  *****   CREATING TRIGGERS     *****   */
+SET SERVEROUTPUT ON; -- Remember to put it in the script for the lecturer.
+
+CREATE OR REPLACE TRIGGER SupervisorID
+    BEFORE INSERT OR UPDATE ON tabEmployees
+    FOR EACH ROW
+DECLARE
+    supervisor typEmployee;
+BEGIN
+    dbms_output.enable;
+    SELECT DEREF(:NEW.supID) INTO supervisor FROM DUAL;
+    
+    IF(supervisor IS NULL AND :NEW.ePosition = 'Head')
+        THEN
+            dbms_output.put_line('Employees Head of the Branch does not have a Supervisor.');
+        ELSIF (supervisor IS NULL)
+            THEN
+                raise_application_error(-20001, 'Supervisor ID is Missing.');
+        ELSIF (supervisor.ePosition = 'Accountant' OR supervisor.ePosition = 'Cashier')
+            THEN
+                raise_application_error(-20002, 'Invalid Supervisor Choice.');
+        ELSIF (:NEW.bID = supervisor.bID)
+            THEN
+                dbms_output.put_line('For ' || :NEW.empID || ' the Supervisor is ' ||
+                supervisor.pFullName.pName || ' ' || supervisor.pFullName.pSurname || ', ' || supervisor.ePosition ||
+                ' at the branch.');
+            ELSE
+                raise_application_error(-20003, 'Employee and Supervisor must work on the same Branch.');
+    END IF;    
+END;
+
+/
+
+CREATE OR REPLACE TRIGGER Employee_IS_Customer
+    BEFORE INSERT OR UPDATE ON tabCustomersAccounts
+    FOR EACH ROW
+DECLARE
+    customer typPerson;
+    baccount typAccount;
+    empBranch REF typBranch;
+    accBranch REF typBranch;
+BEGIN
+    SELECT DEREF(:NEW.accNum).bID INTO accBranch FROM DUAL;
+    SELECT DEREF(:NEW.accHolder) INTO customer FROM DUAL;
+    IF customer IS OF (typEmployee)
+        THEN
+            SELECT TREAT(DEREF(:NEW.accHolder) AS typEmployee).bID INTO empBranch FROM DUAL;
+            
+            IF (empBranch = accBranch)
+                THEN
+                    raise_application_error(-20004, 'An Employee can not have an account in the same branch where he works.');
+                ELSE
+                    dbms_output.put_line('Employee Account correctly entered.');
+            END IF;
+        ELSE
+            dbms_output.put_line('Customer Account correctly entered.');
+    END IF;
+END;
+/
+
+CREATE OR REPLACE TRIGGER IsAccountJoined
+    BEFORE INSERT OR UPDATE ON tabCustomersAccounts
+    FOR EACH ROW
+DECLARE
+    accHolders NUMBER;
+BEGIN
+    SELECT COUNT(accNum) INTO accHolders FROM tabCustomersAccounts WHERE accNum = :NEW.accNum;
+    IF (accHolders) > 0
+        THEN
+            accHolders := accHolders + 1;
+            dbms_output.put_line('This is a Joined Account. Account Holders: ' || accHolders);
+            UPDATE tabAccounts a
+            SET isJoined = 'Y'
+            WHERE :NEW.accNum = REF(a);
+        ELSE
+            accHolders := accHolders + 1;
+            dbms_output.put_line('This is  not a Joined Account. Account Holders: ' || accHolders);
+            UPDATE tabAccounts a
+            SET isJoined = 'N'
+            WHERE :NEW.accNum = REF(a);
+    END IF;
+END;

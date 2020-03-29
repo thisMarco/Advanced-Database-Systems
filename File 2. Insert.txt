@@ -1,0 +1,2425 @@
+/*  INSERT DATA */
+
+/*  BRANCHERS TABLE (tabBranches)  */
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'EDI001',
+        typAddress('36','St Andrew Square','Edinburgh','EH2 2AD'),
+        typPhonesTable(typPhone('Landline','0131','5498888'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'LON001',
+        typAddress('25','Charing Cross Road','London','WC2H 0HZ'),
+        typPhonesTable(typPhone('Landline','020','7345345'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'BIR001',
+        typAddress('15','Colmore Row','Birmingham','B3 2BH'),
+        typPhonesTable(typPhone('Landline','0121','5445888'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'LIV001',
+        typAddress('39','Mill Lane','Liverpool','L12 7HY'),
+        typPhonesTable(typPhone('Landline','0151','54982378'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'GLA001',
+        typAddress('83','Argyle Street','Glasgow','G2 8BJ'),
+        typPhonesTable(typPhone('Landline','0141','5628557'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'EDI002',
+        typAddress('11','Melville Crescent','Edinburgh','EH3 7LU'),
+        typPhonesTable(typPhone('Landline','0131','45685231'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'EDI003',
+        typAddress('10-15','Princess Street','Edinburgh','EH2 2AN'),
+        typPhonesTable(typPhone('Landline','0131','5493304'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'EDI004',
+        typAddress('16','Murray Place','Edinburgh','EH8 2DD'),
+        typPhonesTable(typPhone('Landline','0131','5422001'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'EDI005',
+        typAddress('24','High Street','Edinburgh','EH1 1 SZ'),
+        typPhonesTable(typPhone('Landline','0131','785653110'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'LON002',
+        typAddress('48','Regent Street','London','W1B 5RA'),
+        typPhonesTable(typPhone('Landline','020','7345345'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'LON003',
+        typAddress('27','Soho Square','London','W1D 3QR'),
+        typPhonesTable(typPhone('Landline','020','5521235'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'LON004',
+        typAddress('366','Strand','London','WC2R 0JF'),
+        typPhonesTable(typPhone('Landline','020','7345200'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'LON005',
+        typAddress('2','Victoria Street','London','SW1H 0ND'),
+        typPhonesTable(typPhone('Landline','020','7383245'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'LIV002',
+        typAddress('48B','Lord Street','Liverpool','L2 1TD'),
+        typPhonesTable(typPhone('Landline','0151','8525778'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'LIV003',
+        typAddress('2','Liscard Village','Liverpool','L45 4JS'),
+        typPhonesTable(typPhone('Landline','0151','8520018'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'LIV004',
+        typAddress('337','Stanley Road','Liverpool','L20 3EB'),
+        typPhonesTable(typPhone('Landline','0151','8520018'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'LIV005',
+        typAddress('164','Allerton Road','Liverpool','L18 2DH'),
+        typPhonesTable(typPhone('Landline','0151','2036580'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'BIR002',
+        typAddress('79-84','HIgh Street','Birmingham','B4 7TE'),
+        typPhonesTable(typPhone('Landline','0121','5440318'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'BIR003',
+        typAddress('35','Frederick Street','Birmingham','B1 3HH'),
+        typPhonesTable(typPhone('Landline','0121','5448353'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'BIR004',
+        typAddress('38','Hagley Road','Birmingham','B16 8PE'),
+        typPhonesTable(typPhone('Landline','0121','9862218'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'BIR005',
+        typAddress('339','Birchfield Road','Birmingham','B20 3BJ'),
+        typPhonesTable(typPhone('Landline','0121','8526547'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'GLA002',
+        typAddress('120','Bothwell Street','Glasgow','G2 7JT'),
+        typPhonesTable(typPhone('Landline','0141','82266732'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'GLA003',
+        typAddress('78/80','Kilmarnock Road','Glasgow','G41 3NN'),
+        typPhonesTable(typPhone('Landline','0141','5523007'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'GLA004',
+        typAddress('225','High Street','Glasgow','G7 1RB'),
+        typPhonesTable(typPhone('Landline','0141','5620203'))
+    );
+/
+
+INSERT INTO tabBranches (bid, baddress, bphones)
+    VALUES
+    (
+        'GLA005',
+        typAddress('8','Cornwall Way','Glasgow','G74 1JR'),
+        typPhonesTable(typPhone('Landline','0141','5201533'))
+    );
+/
+
+/*  CUSTOMERS TABLE (tabCustomers)  */
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS001',
+        typName('MR','Reece','Kay'),
+        'ST 99 47 48 D',
+        typAddress('9','Guild St','London','SE21 5AD'),
+        typPhonesTable(typPhone('Landline','020','79460105'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS002',
+        typName('MRS','Demi','Barlow'),
+        'GS 02 50 13 B',
+        typAddress('88','Boroughbridge Rd','Birmingham','B5 7JF'),
+        typPhonesTable(typPhone('Landline','0121','4960621'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS003',
+        typName('MR','Louie','Nicolls'),
+        'TG 05 48 97 D',
+        typAddress('94','Park Row','Edinburgh','EH7 6PS'),
+        typPhonesTable(typPhone('Landline','0131','94960887'), typPhone('Mobile','07501','900420'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS004',
+        typName('MR','Joel','Davey'),
+        'MS 68 23 08 D',
+        typAddress('44','Nith St','Glasgow','G1 3GB'),
+        typPhonesTable(typPhone('Landline','0141','94960966'), typPhone('Mobile','07706','925423'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS005',
+        typName('MRS','Kayleigh','Nixon'),
+        'KZ 10 59 10 B',
+        typAddress('97','Sesame Street','Glasgow','G41 0AT'),
+        typPhonesTable(typPhone('Landline','0131','94922587'), typPhone('Mobile','07703','901100'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS006',
+        typName('MS','Eva','Hope'),
+        'TX 65 29 67 C',
+        typAddress('91','Overton Circle','Liverpool','L3 2UX'),
+        typPhonesTable(typPhone('Landline','0151','94969987'), typPhone('Mobile','07707','911420'), typPhone('Mobile', '07507','911421'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS007',
+        typName('DR','Naomi','Gallagher'),
+        'AY 88 03 20 D',
+        typAddress('12','Princess Street','Edinburgh','EH2 2AN'),
+        typPhonesTable(typPhone('Mobile','07702','908540'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS008',
+        typName('MS','Georgina','Brown'),
+        'KH 37 75 07 B',
+        typAddress('85','Park Terrace','Glasgow','G40 8UJ'),
+        typPhonesTable(typPhone('Landline','0141','95212587'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS009',
+        typName('MR','Henry','Stewart'),
+        'AP 36 91 55 D',
+        typAddress('92','Main Street','Birmingham','B4 1LQ'),
+        typPhonesTable(typPhone('Landline','0121','94123487'), typPhone('Mobile','07700','901111'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS010',
+        typName('MS','Maya','Crawford'),
+        'ON 92 73 93 D',
+        typAddress('37','Mare Street','London','N1 7ZX'),
+        typPhonesTable(typPhone('Landline','020','79460122'), typPhone('Mobile','07700','900594'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS011',
+        typName('MS','Scarlet','Storey'),
+        'HK 21 75 99 D',
+        typAddress('74','Kings Way','London','N1 8DX'),
+        typPhonesTable(typPhone('Landline','020','79460052'), typPhone('Mobile','07705','908584'), typPhone('Mobile','07505','908585'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS012',
+        typName('MR','Samuel','Wyatt'),
+        'ZA 54 78 63 S',
+        typAddress('38','Hill View','Livingston','EH54 8KL'),
+        typPhonesTable(typPhone('Landline','07706','852522'), typPhone('Mobile','07705','900595'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS013',
+        typName('DR','Cameron','Savage'),
+        'YT 67 66 42 A',
+        typAddress('78','Uxbridge Hill View','Liverpool','L78 8OP'),
+        typPhonesTable(typPhone('Landline','0151','7946013'), typPhone('Mobile','07704','900595'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS014',
+        typName('MR','Declan','Poole'),
+        'RZ 24 29 25 A',
+        typAddress('84','Milky Way','Birmingham','B25 A85'),
+        typPhonesTable(typPhone('Landline','0121','79460123'), typPhone('Mobile','07701','900595'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS015',
+        typName('MR','Louis','Walkman'),
+        'KK 27 72 32 C',
+        typAddress('42','Old Bridge Road','Livingston','EH54 7VD'),
+        typPhonesTable(typPhone('Landline','01506','7124422'), typPhone('Mobile','07700','900595'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS016',
+        typName('MR','Dries','Mertens'),
+        'TX 93 05 40 A',
+        typAddress('30','Kingsway East','Livingston','EH54 8VE'),
+        typPhonesTable(typPhone('Landline','01506','7124424'), typPhone('Mobile','07702','900632'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS017',
+        typName('MS','Demi','Holt'),
+        'WJ 39 29 85 A',
+        typAddress('21','Great Western Road','Glasgow','G12 8RE'),
+        typPhonesTable(typPhone('Landline','0141','3346600'), typPhone('Mobile','07702','900633'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS018',
+        typName('MR','Teodor','Bellamy'),
+        'YY 85 22 01 A',
+        typAddress('3','Hill View','Liverpool','L79 8AS'),
+        typPhonesTable(typPhone('Landline','0151','7946014'), typPhone('Mobile','07704','900599'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS019',
+        typName('MRS','Susannah','Brandt'),
+        'AD 67 20 63 B',
+        typAddress('21/A','Accademy Place','Liverpool','L78 8OS'),
+        typPhonesTable(typPhone('Landline','0151','7946015'), typPhone('Mobile','07704','900588'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS020',
+        typName('MS','Anees','Storey'),
+        'DF 74 11 02 L',
+        typAddress('123','Fortyfive Crescent','Birmingham','B12 8OP'),
+        typPhonesTable(typPhone('Landline','0121','7946016'), typPhone('Mobile','07704','900577'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS021',
+        typName('MR','Neal','Hampton'),
+        'DX 85 52 13 L',
+        typAddress('6A','New Holygate','Birmingham','B12 8OZ'),
+        typPhonesTable(typPhone('Landline','0121','7946017'), typPhone('Mobile','07704','900578'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS022',
+        typName('MS','Isla-Grace','Gentry'),
+        'FD 10 02 36 K',
+        typAddress('1','Wrong Way','London','N12 1WE'),
+        typPhonesTable(typPhone('Landline','020','79460060'), typPhone('Mobile','07705','908590'), typPhone('Mobile','07705','908591'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS023',
+        typName('MR','Kaylum','Gale'),
+        'FD 01 02 03 K',
+        typAddress('1','Wrong Way','London','N12 1WE'),
+        typPhonesTable(typPhone('Landline','020','79460060'), typPhone('Mobile','07705','908591'), typPhone('Mobile','07705','908592'))
+    );
+
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS024',
+        typName('MR','Callum','White'),
+        'FA 12 02 67 S',
+        typAddress('12','Right Way','Glasgow','G12 1WE'),
+        typPhonesTable(typPhone('Landline','0141','79460060'))
+    );
+
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS025',
+        typName('MRS','Gia','Mccabe'),
+        'FA 12 02 68 S',
+        typAddress('36','Green Lane','Birmingham','B12 1WE'),
+        typPhonesTable(typPhone('Landline','0121','7946018'), typPhone('Mobile','07704','900579'), typPhone('Mobile','07504','900580'))
+    );
+
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS026',
+        typName('MRS','Anaiya','Croft'),
+        'FA 12 02 69 S',
+        typAddress('9560','Mill Road','Birmingham','B14 8MN'),
+        typPhonesTable(typPhone('Landline','0121','7946019'), typPhone('Mobile','07704','900580'), typPhone('Mobile','07504','900581'))
+    );
+
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS027',
+        typName('MS','Marcelina','Gross'),
+        'FA 12 02 70 S',
+        typAddress('75','Church Road','Birmingham','B14 6JZ'),
+        typPhonesTable(typPhone('Landline','0121','7946020'), typPhone('Mobile','07704','900581'), typPhone('Mobile','07504','900582'))
+    );
+
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS028',
+        typName('MR','Helin','Avalos'),
+        'FA 12 02 71 S',
+        typAddress('64','New Road','Liverpool','L87 2FN'),
+        typPhonesTable(typPhone('Landline','0151','7946016'), typPhone('Mobile','07704','900589'), typPhone('Landline','0151','7946017'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS029',
+        typName('MR','Habib','Flores'),
+        'FA 12 02 72 S',
+        typAddress('9717','York Road','Liverpool','L22 6AL'),
+        typPhonesTable(typPhone('Landline','0151','7946018'), typPhone('Mobile','07504','900590'), typPhone('Mobile','07704','900591'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS030',
+        typName('MS','Kya','Bassett'),
+        'FA 12 02 73 S',
+        typAddress('72','George Street','Liverpool','L71 7CX'),
+        typPhonesTable(typPhone('Landline','0151','7946019'), typPhone('Mobile','07504','900591'), typPhone('Mobile','07704','900592'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS031',
+        typName('DR','Celesta','Simons'),
+        'FA 12 02 74 S',
+        typAddress('3','Park Lane','Edinburgh','EH6 0VF'),
+        typPhonesTable(typPhone('Mobile','07702','908541'))
+    );
+/
+
+INSERT INTO tabCustomers (cusid, pfullname, nin, pfulladdress, pphones)
+    VALUES
+    (
+        'CUS032',
+        typName('DR','Pixie','Cooley'),
+        'FA 12 02 75 S',
+        typAddress('92','The Crescent','Edinburgh','EH1 2XG'),
+        typPhonesTable(typPhone('Mobile','07702','908542'))
+    );
+/
+
+/*  EMPLOYERS TABLE (tabEmployers)  */
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP001',
+        typName('MR','Cameron','Webster'),
+        'GZ 39 44 84 B',
+        typAddress('98','Thompsons Lane','Edinburgh','EH11 8LK'),
+        typPhonesTable(typPhone('Landline','0131','79985661'), typPhone('Mobile','07706','925574')),
+        'Head',
+        85000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'EDI001'),
+        NULL,
+        '15-Jan-00'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP002',
+        typName('MS','Eva','John'),
+        'GG 50 91 69',
+        typAddress('73','Lothian View','Edinburgh','EH9 3UN'),
+        typPhonesTable(typPhone('Landline','0131','70255662'), typPhone('Mobile','07707','925575')),
+        'Manager',
+        65000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'EDI001'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP001'),
+        '18-Mar-05'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP003',
+        typName('MRS','Abbie','Faulkner'),
+        'RZ 50 14 14 B',
+        typAddress('76','Glasgow Way','Edinburgh','EH8 8JD'),
+        typPhonesTable(typPhone('Landline','0131','70255782'), typPhone('Mobile','07707','925885')),
+        'Accountant',
+        35000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'EDI001'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP002'),
+        '13-Jun-98'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP004',
+        typName('MS','Morgan','Peacock'),
+        'SG 48 44 93 B',
+        typAddress('30','Baggers Crescent','Edinburgh','EH10 5AX'),
+        typPhonesTable(typPhone('Landline','0131','70335782'), typPhone('Mobile','07707','925252')),
+        'Cashier',
+        30000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'EDI001'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP002'),
+        '23-May-03'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP005',
+        typName('MRS','Stacy','Forsterd'),
+        'HK 21 75 99 D',
+        typAddress('25','Baggers Place','Edinburgh','EH11 5YT'),
+        typPhonesTable(typPhone('Landline','0131','70335851'), typPhone('Mobile','07705','923322')),
+        'Cashier',
+        30000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'EDI001'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP002'),
+        '6-Feb-05'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP006',
+        typName('MR','Agostino','Russo'),
+        'HU 77 75 22 D',
+        typAddress('9','River Crescent','Edinburgh','EH23 7MN'),
+        typPhonesTable(typPhone('Landline','0131','78525851'), typPhone('Mobile','07705','852622')),
+        'Manager',
+        68000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'EDI001'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP002'),
+        '7-Sep-19'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP007',
+        typName('MRS','Kristal','Ferguson'),
+        'HJ 74 11 02 D',
+        typAddress('99','Napier Avenue','London','EC12 5FG'),
+        typPhonesTable(typPhone('Landline','020','78525861'), typPhone('Mobile','07705','852652')),
+        'Head',
+        85000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'LON001'),
+        NULL,
+        '17-Oct-97'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP008',
+        typName('MR','Lester','Hysai'),
+        'BB 64 11 12 D',
+        typAddress('2-A','Bricks Crescent','London','EC2 7RC'),
+        typPhonesTable(typPhone('Landline','020','78525961'), typPhone('Mobile','07706','852663')),
+        'Manager',
+        65000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'LON001'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP007'),
+        '18-Nov-98'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP009',
+        typName('MR','Lester','Hysai'),
+        'BB 64 11 12 D',
+        typAddress('2-A','Bricks Crescent','London','EC2 7RC'),
+        typPhonesTable(typPhone('Landline','020','78525961'), typPhone('Mobile','07706','852663')),
+        'Manager',
+        67000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'LON001'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP007'),
+        '18-Nov-98'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP010',
+        typName('MS','Cristina','Hamilton'),
+        'BH 01 23 52 D',
+        typAddress('10','Westminister Lane','London','EC1 7IC'),
+        typPhonesTable(typPhone('Landline','020','78525052'), typPhone('Mobile','07705','852677'), typPhone('Mobile','07705','852678')),
+        'Project Leader',
+        55000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'LON001'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP007'),
+        '1-Dec-18'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP011',
+        typName('MS','Destin','Justin'),
+        'VH 05 25 72 S',
+        typAddress('140','Far Lane','London','EC19 1WS'),
+        typPhonesTable(typPhone('Landline','020','78525083'), typPhone('Mobile','07705','852641'), typPhone('Mobile','07706','852679')),
+        'Cashier',
+        33000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'LON001'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP010'),
+        '7-Jan-15'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP012',
+        typName('MS','Catrina','Watkins'),
+        'VT 55 21 30 S',
+        typAddress('13','Ols Farm Lane','Birmingham','B19 1WS'),
+        typPhonesTable(typPhone('Landline','0121','78525084'), typPhone('Mobile','07705','852642'), typPhone('Mobile','07706','852680')),
+        'Head',
+        90000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'BIR001'),
+        NULL,
+        '8-Feb-99'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP013',
+        typName('MRS','Humaria','Hooper'),
+        'ST 56 22 30 S',
+        typAddress('14','Hidden Lane','Birmingham','B20 2ZD'),
+        typPhonesTable(typPhone('Landline','0121','78525085'), typPhone('Mobile','07705','852643')),
+        'Manager',
+        75000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'BIR001'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP012'),
+        '9-Mar-00'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP014',
+        typName('DR','Rhian','Davison'),
+        'ZT 57 23 31 S',
+        typAddress('15','Hidden Street','Birmingham','B20 2ZE'),
+        typPhonesTable(typPhone('Landline','0121','78525086'), typPhone('Mobile','07705','852644')),
+        'Project Leader',
+        50000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'BIR001'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP013'),
+        '10-Apr-01'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP015',
+        typName('MS','Olivia','Beard'),
+        'TT 57 22 30 D',
+        typAddress('15','Park Lane','Birmingham','B20 2ZE'),
+        typPhonesTable(typPhone('Landline','0121','78525087'), typPhone('Mobile','07705','852644')),
+        'Cashier',
+        25000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'BIR001'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP013'),
+        '11-May-19'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP016',
+        typName('MRS','Lilly-Mae','Lewis'),
+        'HT 58 23 31 E',
+        typAddress('16','Mill Road','Birmingham','B10 3XR'),
+        typPhonesTable(typPhone('Landline','0121','78525088'), typPhone('Mobile','07705','852645')),
+        'Head',
+        95000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'BIR002'),
+        NULL,
+        '12-Jun-91'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP017',
+        typName('MR','Eliot','Sutherland'),
+        'TY 58 23 31 F',
+        typAddress('73','Grange Road','Birmingham','B21 3TF'),
+        typPhonesTable(typPhone('Landline','0121','78525088')),
+        'Manager',
+        65000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'BIR002'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP016'),
+        '13-Aug-18'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP018',
+        typName('MS','Kiri','George'),
+        'JY 59 23 32 R',
+        typAddress('68','The Crescent','Birmingham','B17 9YF'),
+        typPhonesTable(typPhone('Landline','0121','78525090'), typPhone('Mobile','07705','852647')),
+        'Project Leader',
+        53000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'BIR002'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP017'),
+        '14-Jul-15'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP019',
+        typName('MR','Bailey','Kelley'),
+        'KU 60 24 32 T',
+        typAddress('90','South Street','Birmingham','B18 9YG'),
+        typPhonesTable(typPhone('Landline','0121','78525091'), typPhone('Mobile','07705','852648')),
+        'Accountant',
+        33000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'BIR002'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP018'),
+        '15-Sep-19'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP020',
+        typName('DR','Martine','Arellano'),
+        'LI 61 24 33 T',
+        typAddress('49','Kings Road','Birmingham','B19 0QA'),
+        typPhonesTable(typPhone('Landline','0121','78525092'), typPhone('Mobile','07705','852649')),
+        'Cashier',
+        23000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'BIR002'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP018'),
+        '7-Jan-20'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP021',
+        typName('DR','Krista','Duggan'),
+        'AO 62 25 34 Y',
+        typAddress('7','Manor Road','Birmingham','B12 3RL'),
+        typPhonesTable(typPhone('Landline','0121','78525093'), typPhone('Mobile','07705','852650')),
+        'Head',
+        80000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'BIR003'),
+        NULL,
+        '8-Feb-10'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP022',
+        typName('MR','Iqrah','Felix'),
+        'SP 63 26 33 Y',
+        typAddress('9095','Park Lane','Birmingham','B25 6RK'),
+        typPhonesTable(typPhone('Landline','0121','78525094'), typPhone('Mobile','07705','852651')),
+        'Cashier',
+        23000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'BIR003'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP021'),
+        '7-Jan-20'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP023',
+        typName('MR','Bruno','Hibbert'),
+        'DQ 64 27 34 U',
+        typAddress('91','Victoria Road','Birmingham','B4 8DN'),
+        typPhonesTable(typPhone('Landline','0121','78525095'), typPhone('Mobile','07705','852652')),
+        'Head',
+        83000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'BIR004'),
+        NULL,
+        '8-Feb-11'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP024',
+        typName('MRS','Shelley','Simmons'),
+        'FW 65 27 35 I',
+        typAddress('9131','Park Road','Birmingham','B86 2AS'),
+        typPhonesTable(typPhone('Landline','0121','78525096'), typPhone('Mobile','07705','852653')),
+        'Cashier',
+        27000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'BIR004'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP023'),
+        '19-Mar-15'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP025',
+        typName('MRS','Sakina','Sykes'),
+        'GE 65 27 35 I',
+        typAddress('315','Springfield Road','Birmingham','B38 1YF'),
+        typPhonesTable(typPhone('Landline','0121','78525097'), typPhone('Mobile','07705','852654')),
+        'Head',
+        82500,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'BIR005'),
+        NULL,
+        '20-Apr-12'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP026',
+        typName('MS','Hawwa','Quintana'),
+        'HR 66 28 36 O',
+        typAddress('81','Queen Street','Birmingham','B79 6JW'),
+        typPhonesTable(typPhone('Landline','0121','78525098'), typPhone('Mobile','07705','852655')),
+        'Cashier',
+        27000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'BIR005'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP025'),
+        '19-Mar-15'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP027',
+        typName('MRS','Verity','Britton'),
+        'JT 67 29 37 P',
+        typAddress('21','Park Lane','Glasgow','G81 8ND'),
+        typPhonesTable(typPhone('Landline','0141','52565410'), typPhone('Mobile','07706','853210')),
+        'Head',
+        83550,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'GLA001'),
+        NULL,
+        '21-May-15'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP028',
+        typName('MRS','Sofie','Reeve'),
+        'KY 68 30 38 Z',
+        typAddress('440','Windsor Road','Glasgow','G80 4GN'),
+        typPhonesTable(typPhone('Landline','0141','52565411'), typPhone('Mobile','07706','853211')),
+        'Cashier',
+        19500,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'GLA001'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP027'),
+        '22-Jan-20'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP046',
+        typName('MRS','Karishma','Molloy'),
+        'JH 56 38 12 E',
+        typAddress('72','King Lane','Glasgow','G93 5KO'),
+        typPhonesTable(typPhone('Landline','0141','52585462'), typPhone('Mobile','07706','853851')),
+        'Head',
+        83550,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'GLA002'),
+        NULL,
+        '21-May-15'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP029',
+        typName('DR','Alastair','Irwin'),
+        'LU 69 29 39 X',
+        typAddress('28','New Street','Glasgow','G78 7RG'),
+        typPhonesTable(typPhone('Landline','0141','52565412'), typPhone('Mobile','07706','853212')),
+        'Head',
+        81250,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'GLA003'),
+        NULL,
+        '23-Aug-12'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP030',
+        typName('MS','Saskia','Farrow'),
+        'ZI 70 31 40 X',
+        typAddress('771','Queensway','Glasgow','G1 6MS'),
+        typPhonesTable(typPhone('Landline','0141','52565413'), typPhone('Mobile','07706','853213')),
+        'Head',
+        89500,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'GLA004'),
+        NULL,
+        '13-Dec-11'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP031',
+        typName('MS','Oktavia','Ryder'),
+        'XO 71 32 41 C',
+        typAddress('19','Grange Road','Glasgow','G7 1HU'),
+        typPhonesTable(typPhone('Landline','0141','52565414'), typPhone('Mobile','07706','853214')),
+        'Cashier',
+        21500,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'GLA003'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP029'),
+        '11-Jan-13'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP032',
+        typName('MR','Steffan','Cisneros'),
+        'CP 72 33 42 V',
+        typAddress('19','Chester Road','Glasgow','G38 3OI'),
+        typPhonesTable(typPhone('Landline','0141','52565415'), typPhone('Mobile','07706','853215')),
+        'Cashier',
+        21500,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'GLA004'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP030'),
+        '27-Feb-12'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP033',
+        typName('MS','Shakira','Dudley'),
+        'VZ 73 32 45 Q',
+        typAddress('40','New Lane','Glasgow','G34 5TP'),
+        typPhonesTable(typPhone('Landline','0141','52565416'), typPhone('Mobile','07706','853216')),
+        'Head',
+        83300,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'GLA005'),
+        NULL,
+        '23-Mar-01'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP034',
+        typName('MR','Winifred','Frey'),
+        'BX 72 23 42 B',
+        typAddress('20','Broadway','Glasgow','G77 0MQ'),
+        typPhonesTable(typPhone('Landline','0141','52565417'), typPhone('Mobile','07706','853217')),
+        'Cashier',
+        21500,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'GLA005'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP033'),
+        '26-Nov-17'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP035',
+        typName('MRS','Amalie','Lynch'),
+        'HX 40 45 85 C',
+        typAddress('92','The Crescent','Edinburgh','EH63 0FX'),
+        typPhonesTable(typPhone('Landline','0131','7898712'), typPhone('Mobile','07703','924125')),
+        'Head',
+        85000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'EDI002'),
+        NULL,
+        '16-Feb-01'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP036',
+        typName('MR','Earnest','Kirk'),
+        'JC 41 46 86 D',
+        typAddress('76','Station Road','Edinburgh','EH67 4HE'),
+        typPhonesTable(typPhone('Landline','0131','7898713'), typPhone('Mobile','07703','924126')),
+        'Accountant',
+        45000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'EDI002'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP035'),
+        '17-Mar-03'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP037',
+        typName('MS','Esta','Drummond'),
+        'KV 42 47 87 E',
+        typAddress('31','St. John’s Road','Edinburgh','EH72 2WC'),
+        typPhonesTable(typPhone('Landline','0131','7898714'), typPhone('Mobile','07703','924127'), typPhone('Mobile','07705','924128')),
+        'Head',
+        85000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'EDI003'),
+        NULL,
+        '19-Apr-05'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP038',
+        typName('MS','Janine','Thornton'),
+        'LB 43 48 88 F',
+        typAddress('71','Park Avenue','Edinburgh','EH41 8UT'),
+        typPhonesTable(typPhone('Landline','0131','7898715'), typPhone('Mobile','07703','924129')),
+        'Cashier',
+        23300,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'EDI003'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP037'),
+        '21-Apr-07'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP039',
+        typName('MR','Muhamed','Ali'),
+        'AZ 11 22 34 W',
+        typAddress('76','North Road','Edinburgh','EH60 6SJ'),
+        typPhonesTable(typPhone('Landline','0131','7898716'), typPhone('Mobile','07703','924129')),
+        'Head',
+        78000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'EDI004'),
+        NULL,
+        '21-Feb-20'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP040',
+        typName('MR','Kaden','Roman'),
+        'SX 45 65 31 X',
+        typAddress('71','Chester Road','Edinburgh','EH19 5ED'),
+        typPhonesTable(typPhone('Landline','0131','7898717'), typPhone('Mobile','07703','924131')),
+        'Cashier',
+        21750,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'EDI004'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP039'),
+        '21-Apr-07'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP041',
+        typName('MR','Azeem','Marsden'),
+        'FG 16 29 99 M',
+        typAddress('459','Grange Road','Edinburgh','EH65 6QU'),
+        typPhonesTable(typPhone('Landline','0131','7891256'), typPhone('Mobile','07702','923289')),
+        'Head',
+        79250,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'EDI005'),
+        NULL,
+        '1-Jan-16'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP042',
+        typName('MR','Artur','Best'),
+        'LM 74 81 12 D',
+        typAddress('277','Alexander Road','London','EC14 5ST'),
+        typPhonesTable(typPhone('Landline','020','78525123'), typPhone('Mobile','07705','852123')),
+        'Head',
+        92000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'LON002'),
+        NULL,
+        '17-Nov-91'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP043',
+        typName('MRS','Alexie','Vaughn'),
+        'NK 64 82 13 E',
+        typAddress('61','Victoria Road','London','EC87 8QM'),
+        typPhonesTable(typPhone('Landline','020','78525124'), typPhone('Mobile','07705','852124')),
+        'Head',
+        88000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'LON003'),
+        NULL,
+        '18-Apr-17'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP044',
+        typName('MR','Cherish','Trejo'),
+        'NH 87 23 43 T',
+        typAddress('33','The Grove','London','EC15 0IU'),
+        typPhonesTable(typPhone('Landline','020','78525125'), typPhone('Mobile','07705','852125')),
+        'Head',
+        87000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'LON004'),
+        NULL,
+        '21-May-18'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP045',
+        typName('MRS','Helin','Muir'),
+        'ER 67 25 41 G',
+        typAddress('45','The Drive','London','EC78 2LO'),
+        typPhonesTable(typPhone('Landline','020','78525126'), typPhone('Mobile','07705','852126')),
+        'Head',
+        87000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'LON005'),
+        NULL,
+        '11-Sep-18'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP047',
+        typName('MR','Deom','Jones'),
+        'RR 68 26 42 E',
+        typAddress('501','New Street','Glasgow','G85 5PJ'),
+        typPhonesTable(typPhone('Landline','0141','78525127'), typPhone('Mobile','07705','852452')),
+        'Head',
+        82000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'GLA002'),
+        NULL,
+        '12-Oct-10'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP048',
+        typName('MRS','Amy-Louise','Smith'),
+        'RT 69 27 43 T',
+        typAddress('908','The Green','Glasgow','G18 0UK'),
+        typPhonesTable(typPhone('Landline','0141','78525128'), typPhone('Mobile','07705','852453')),
+        'Manager',
+        65000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'GLA002'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP047'),
+        '13-Nov-11'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP049',
+        typName('MR','Jarrad','Salas'),
+        'DF 70 28 44 Y',
+        typAddress('8','London Road','Glasgow','G53 0OR'),
+        typPhonesTable(typPhone('Landline','0141','78525129'), typPhone('Mobile','07705','852454')),
+        'Cashier',
+        25000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'GLA002'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP048'),
+        '13-Dec-13'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP050',
+        typName('MS','Lydia','Gilmour'),
+        'EF 71 29 45 U',
+        typAddress('920','Highfield Road','Glasgow','G22 0VN'),
+        typPhonesTable(typPhone('Landline','0141','78525130'), typPhone('Mobile','07705','852455')),
+        'Cashier',
+        25500,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'GLA002'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP048'),
+        '15-Feb-19'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP052',
+        typName('MR','Francis','Ridley'),
+        'TY 40 92 71 E',
+        typAddress('20','Park View','Edinburgh','EH9 4BV'),
+        typPhonesTable(typPhone('Landline','0131','70255988'), typPhone('Mobile','07707','925002')),
+        'Cashier',
+        25000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'EDI001'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP002'),
+        '19-May-08'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP053',
+        typName('MRS','Alexie','Small'),
+        'YU 41 92 72 R',
+        typAddress('9196','St. John’s Road','Edinburgh','EH94 6ZH'),
+        typPhonesTable(typPhone('Landline','0131','70255989'), typPhone('Mobile','07707','925003')),
+        'Project Leader',
+        45000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'EDI001'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP002'),
+        '20-May-18'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP054',
+        typName('MR','Viaan','Swift'),
+        'UI 41 92 73 S',
+        typAddress('251','Church Lane','Edinburgh','EH76 3NP'),
+        typPhonesTable(typPhone('Landline','0131','70255930'), typPhone('Mobile','07707','925004')),
+        'Project Leader',
+        45000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'EDI001'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP002'),
+        '20-May-18'
+    );
+/
+
+INSERT INTO tabEmployees (empid, pfullname, nin, pfulladdress, pphones, eposition, esalary, bid, supID, joindate)
+    VALUES
+    (
+        'EMP055',
+        typName('MRS','Hadiya','Warner'),
+        'HJ 74 11 03 D',
+        typAddress('61','Manchester Road','London','EC25 4NP'),
+        typPhonesTable(typPhone('Landline','020','78525520'), typPhone('Mobile','07705','852332')),
+        'Cashier',
+        25000,
+        (SELECT REF(b) FROM tabBranches b WHERE b.bid = 'LON001'),
+        (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP007'),
+        '17-Oct-17'
+    );
+/
+
+/*  ACCOUNTS TABLE (tabAccounts)  */
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      1,
+      'Current',
+      23521,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'EDI001'),
+      0.02,
+      250,
+      '12-Apr-17'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      21,
+      'Savings',
+      22021,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'EDI001'),
+      0.02,
+      25,
+      '11-Mar-16'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      2,
+      'Current',
+      33521,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'EDI002'),
+      0.03,
+      350,
+      '13-Mar-15'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      22,
+      'Savings',
+      134561,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'EDI002'),
+      0.05,
+      50,
+      '12-Feb-15'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      3,
+      'Current',
+      3521,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'EDI003'),
+      0.07,
+      150,
+      '2-Jan-19'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      23,
+      'Savings',
+      38501,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'EDI003'),
+      0.05,
+      50,
+      '1-Dec-18'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      4,
+      'Current',
+      35021,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'EDI004'),
+      0.03,
+      500,
+      '3-Feb-10'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      24,
+      'Savings',
+      5021,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'EDI004'),
+      0.03,
+      50,
+      '2-Jan-09'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      5,
+      'Current',
+      28022,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'EDI005'),
+      0.03,
+      400,
+      '4-Mar-11'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      25,
+      'Savings',
+      2022,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'EDI005'),
+      0.05,
+      50,
+      '3-Feb-11'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      6,
+      'Current',
+      45021,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'GLA001'),
+      0.02,
+      750,
+      '4-Apr-12'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      26,
+      'Savings',
+      125091,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'GLA001'),
+      0.02,
+      50,
+      '3-Feb-12'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      7,
+      'Current',
+      5045,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'GLA002'),
+      0.01,
+      50,
+      '5-May-13'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      27,
+      'Savings',
+      50045,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'GLA002'),
+      0.05,
+      50,
+      '4-Apr-13'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      8,
+      'Current',
+      45,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'GLA003'),
+      0.23,
+      50,
+      '6-Jun-19'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      28,
+      'Savings',
+      4500,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'GLA003'),
+      0.03,
+      50,
+      '5-May-19'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      9,
+      'Current',
+      45025,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'GLA004'),
+      0.03,
+      500,
+      '7-Jul-13'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      29,
+      'Savings',
+      5025,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'GLA004'),
+      0.05,
+      50,
+      '6-Jul-12'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      10,
+      'Current',
+      35032,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'GLA005'),
+      0.03,
+      500,
+      '8-Aug-14'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      30,
+      'Savings',
+      32032,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'GLA005'),
+      0.03,
+      50,
+      '7-Jul-14'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      11,
+      'Current',
+      75033,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'LON001'),
+      0.05,
+      750,
+      '9-Sep-15'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      31,
+      'Savings',
+      57073,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'LON001'),
+      0.05,
+      50,
+      '8-Aug-15'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      12,
+      'Current',
+      76521,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'LON002'),
+      0.05,
+      750,
+      '10-Oct-15'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      32,
+      'Savings',
+      22521,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'LON002'),
+      0.05,
+      50,
+      '10-Oct-15'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      13,
+      'Current',
+      98525,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'LON003'),
+      0.05,
+      750,
+      '11-Nov-15'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      33,
+      'Savings',
+      100252,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'LON003'),
+      0.05,
+      50,
+      '15-Dec-15'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      14,
+      'Current',
+      88530,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'LON004'),
+      0.05,
+      750,
+      '12-Dec-15'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      34,
+      'Savings',
+      88200,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'LON004'),
+      0.05,
+      50,
+      '13-Mar-15'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      15,
+      'Current',
+      88850,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'LON005'),
+      0.05,
+      750,
+      '13-Jan-16'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      35,
+      'Savings',
+      80850,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'LON005'),
+      0.05,
+      50,
+      '13-Jan-16'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      16,
+      'Current',
+      850,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'BIR001'),
+      0.09,
+      50,
+      '14-Feb-16'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      36,
+      'Savings',
+      500,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'BIR001'),
+      0.02,
+      50,
+      '14-Feb-16'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      17,
+      'Current',
+      898,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'BIR002'),
+      0.09,
+      50,
+      '15-Mar-16'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      37,
+      'Savings',
+      1250,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'BIR002'),
+      0.03,
+      50,
+      '11-Jan-16'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      18,
+      'Current',
+      1025,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'BIR003'),
+      0.07,
+      75,
+      '16-Apr-16'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      38,
+      'Savings',
+      1025,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'BIR003'),
+      0.03,
+      50,
+      '26-Nov-18'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      19,
+      'Current',
+      1565,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'BIR004'),
+      0.07,
+      75,
+      '17-May-16'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      39,
+      'Savings',
+      12300,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'BIR004'),
+      0.05,
+      50,
+      '31-Jan-17'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      20,
+      'Current',
+      3477,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'BIR005'),
+      0.07,
+      100,
+      '18-Jun-16'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      40,
+      'Savings',
+      34077,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'BIR005'),
+      0.05,
+      50,
+      '30-May-19'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      41,
+      'Savings',
+      3407,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'BIR005'),
+      0.05,
+      50,
+      '31-May-19'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      42,
+      'Current',
+      5240,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'BIR001'),
+      0.02,
+      75,
+      '12-May-16'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      43,
+      'Current',
+      2140,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'GLA001'),
+      0.02,
+      1000,
+      '12-May-16'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      44,
+      'Savings',
+      8740,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'LIV001'),
+      0.02,
+      1000,
+      '12-May-17'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      45,
+      'Savings',
+      740.52,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'LIV002'),
+      0.02,
+      1000,
+      '12-May-17'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      46,
+      'Savings',
+      1740.01,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'GLA001'),
+      0.02,
+      1000,
+      '15-May-18'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      47,
+      'Savings',
+      17940.89,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'GLA002'),
+      0.02,
+      1000,
+      '14-May-18'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      48,
+      'Savings',
+      1790.67,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'GLA003'),
+      0.02,
+      500,
+      '13-May-18'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      49,
+      'Savings',
+      2790.67,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'GLA004'),
+      0.02,
+      350,
+      '12-May-18'
+    );
+/
+
+INSERT INTO tabAccounts (accNumber, accType, balance, bID, intRate, limFreeOD, openDate)
+    VALUES
+    (
+      50,
+      'Savings',
+      27990.07,
+      (SELECT REF (b) FROM tabBranches b WHERE b.bID = 'GLA005'),
+      0.02,
+      1050,
+      '18-Dec-17'
+    );
+/
+
+/*  CUSTOMERS ACCOUNTS TABLE (tabCustomersAccounts)  */
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP001'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 2)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP002'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 3)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS003'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 3)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS008'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 8)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS013'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 16)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS012'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 2)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS004'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 9)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP034'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 9)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS007'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 23)
+    );
+/
+
+
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS017'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 10)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS005'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 10)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS015'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 6)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS016'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 6)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS022'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 31)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS023'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 31)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP031'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 43)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS024'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 43)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP015'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 37)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP003'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 4)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS006'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 44)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP048'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 46)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP047'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 48)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP033'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 47)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS008'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 47)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS002'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 18)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS027'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 38)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS025'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 20)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP018'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 20)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP017'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 40)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP016'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 41)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS007'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 1)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP041'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 1)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS030'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 21)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS010'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 12)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS011'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 32)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS001'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 13)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS006'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 33)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(c) FROM tabCustomers c WHERE c.cusID = 'CUS028'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 14)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP032'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 30)
+    );
+/
+
+INSERT INTO tabCustomersAccounts (accHolder, accNum)
+    VALUES
+    (
+      (SELECT REF(e) FROM tabEmployees e WHERE e.empID = 'EMP014'),
+      (SELECT REF(a) FROM tabAccounts a WHERE a.accNumber = 17)
+    );
+/
