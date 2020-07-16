@@ -1,4 +1,5 @@
 Scenario
+
 A bank has several branches in the UK. It needs a database to store
 information about its local branches. Each branch is identified by a
 unique branch code, an address (street, city, post code), and a phone
